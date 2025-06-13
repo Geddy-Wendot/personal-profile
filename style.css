@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #0a0a0a;
+  color: #e5e5e5;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: radial-gradient(circle, #111, #000);
+  animation: fadeIn 1s ease-in;
+}
+
+.logo-glitch {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00ffff;
+  animation: glitch 1.5s infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red, -2px 0 cyan; }
+  50% { text-shadow: -2px 0 red, 2px 0 cyan; }
+  100% { text-shadow: 2px 0 red, -2px 0 cyan; }
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  background-color: #111;
+  margin: 0;
+}
+
+nav li a {
+  padding: 1rem;
+  color: #00ffff;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+nav li a:hover {
+  background: #222;
+}
+
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.project {
+  background: #111;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 3px solid #00ffff;
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+}
+
+#modeToggle {
+  background: none;
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#modeToggle:hover {
+  background: #00ffff;
+  color: #000;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-in-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body.light {
+  background-color: #f5f5f5;
+  color: #111;
+}
+
+body.light nav ul {
+  background-color: #ddd;
+}
+
+body.light nav li a {
+  color: #0077cc;
+}
+
+body.light .project {
+  background: #fff;
+  border-left: 3px solid #0077cc;
+}
