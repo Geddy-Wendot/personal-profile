@@ -192,44 +192,78 @@ from, to { border-color: transparent; }
 }
 
 .glitch {
-position: relative;
-color: #00ffff;
+  position: relative;
+  color: #00ffff;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-shadow: 0 0 2px #00ffff, 0 0 5px #00ffff, 0 0 10px #00ffff;
+  animation: glowPulse 1.5s ease-in-out infinite alternate;
 }
 
+/* Create glitch layers */
 .glitch::before,
 .glitch::after {
-content: attr(data-text);
-position: absolute;
-left: 0;
-width: 100%;
-overflow: hidden;
-color: #00ffff;
-clip: rect(0, 900px, 0, 0);
-animation: glitchAnim 2s infinite;
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  color: #00ffff;
+  clip: rect(0, 0, 0, 0);
+  animation: glitchAnim 2s infinite linear alternate-reverse;
+  opacity: 0.8;
 }
 
 .glitch::before {
-animation-delay: 0.3s;
-color: #ff00c8;
+  color: #ff00c8;
+  left: 2px;
+  top: -2px;
+  animation-delay: 0.2s;
 }
 
 .glitch::after {
-animation-delay: 0.6s;
-color: #00ffcc;
+  color: #00ffcc;
+  left: -2px;
+  top: 2px;
+  animation-delay: 0.4s;
 }
 
+/* Glitch animation */
 @keyframes glitchAnim {
-0% { clip: rect(42px, 9999px, 44px, 0); }
-10% { clip: rect(10px, 9999px, 50px, 0); }
-20% { clip: rect(30px, 9999px, 60px, 0); }
-30% { clip: rect(5px, 9999px, 20px, 0); }
-40% { clip: rect(15px, 9999px, 25px, 0); }
-50% { clip: rect(0px, 9999px, 10px, 0); }
-60% { clip: rect(60px, 9999px, 70px, 0); }
-70% { clip: rect(10px, 9999px, 30px, 0); }
-80% { clip: rect(20px, 9999px, 40px, 0); }
-90% { clip: rect(40px, 9999px, 50px, 0); }
-100% { clip: rect(30px, 9999px, 60px, 0); }
+  0% { clip: rect(42px, 9999px, 44px, 0); }
+  10% { clip: rect(10px, 9999px, 50px, 0); }
+  20% { clip: rect(30px, 9999px, 60px, 0); }
+  30% { clip: rect(5px, 9999px, 20px, 0); }
+  40% { clip: rect(15px, 9999px, 25px, 0); }
+  50% { clip: rect(0px, 9999px, 10px, 0); }
+  60% { clip: rect(60px, 9999px, 70px, 0); }
+  70% { clip: rect(10px, 9999px, 30px, 0); }
+  80% { clip: rect(20px, 9999px, 40px, 0); }
+  90% { clip: rect(40px, 9999px, 50px, 0); }
+  100% { clip: rect(30px, 9999px, 60px, 0); }
+}
+
+.glitch:hover {
+  transform: skewX(-5deg) scale(1.05);
+  text-shadow: 0 0 10px #ff00c8, 0 0 20px #00ffff;
+}
+
+
+/* Glowing pulsing effect */
+@keyframes glowPulse {
+  0% {
+    text-shadow:
+      0 0 2px #00ffff,
+      0 0 5px #00ffff,
+      0 0 10px #00ffff,
+      0 0 15px #00ffff;
+  }
+  100% {
+    text-shadow:
+      0 0 4px #00ffff,
+      0 0 10px #00ffff,
+      0 0 20px #00ffff,
+      0 0 30px #00ffff;
+  }
 }
 
 .logo-link {
