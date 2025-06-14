@@ -232,4 +232,33 @@ color: #00ffcc;
 100% { clip: rect(30px, 9999px, 60px, 0); }
 }
 
+.logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.logo-container:hover {
+  transform: scale(1.05);
+}
+
+.logo-svg {
+  animation: glowPulse 2s infinite alternate;
+  filter: drop-shadow(0 0 5px #00ffff);
+}
+
+@keyframes glowPulse {
+  0% { filter: drop-shadow(0 0 5px #00ffff); }
+  100% { filter: drop-shadow(0 0 15px #ff00c8); }
+}
+
 

@@ -1,0 +1,5 @@
+<!-- favicon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="M10 80 L50 10 L90 80 L70 80 L50 40 L30 80 Z" 
+        fill="none" stroke="#00ffff" stroke-width="5" />
+</svg>

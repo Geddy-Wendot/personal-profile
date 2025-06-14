@@ -61,3 +61,12 @@ modeToggle.addEventListener("click", () => {
   const theme = document.body.classList.contains("light") ? "light" : "dark";
   localStorage.setItem("theme", theme);
 });
+
+// script.js
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
+  });
+});
