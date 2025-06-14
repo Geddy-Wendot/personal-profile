@@ -15,17 +15,63 @@
   <meta property="og:title" content="G-Vector | Cyber Portfolio">
   <meta property="og:description" content="Explore Geddy Wendot's portfolio, featuring projects in cybersecurity, programming, and mathematics.">
   <link rel="apple-touch-icon" href="assets/favicon.svg">
- 
-</head>
-<body>
-  <header class="hero">
-    <div class="logo-glitch">Geddy Wendot</div>
-    <h1 id="typewriter"></h1>
-    <p class="subtitle">Mathematics. Code. Cybersecurity. Welcome to my command center.</p>
-    <button id="modeToggle">Switch Mode</button>
-  </header>
 
-  <nav>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #00ffcc;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .terminal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #000 !important;
+      color: #00ff00;
+      font-family: "Courier New", monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .terminal.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .terminal-glitch {
+      font-size: 2rem;
+      text-align: center;
+      animation: flicker 0.2s infinite alternate;
+    }
+
+    @keyframes flicker {
+      from { opacity: 1; }
+      to { opacity: 0.3; }
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body class="dark">
+
+  <!-- 🟩 TERMINAL GLITCH OVERLAY -->
+  <div id="terminalOverlay" class="terminal hidden">
+    <div class="terminal-content">
+      <p class="terminal-glitch">ACCESS GRANTED</p>
+      <pre id="terminalNoise">█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒</pre>
+    </div>
+  </div>
+
+  <!-- 🔻 Sidebar Navigation -->
+  <nav class="sidebar">
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -36,27 +82,60 @@
     </ul>
   </nav>
 
+  <!-- 💀 Hero Header -->
+  <header class="hero">
+     <section id="home" class="reveal">
+      <a href="#home" class="logo-link">
+        <div class="logo-container">
+          <svg viewBox="0 0 100 100" width="60" height="60" class="logo-svg">
+            <path d="M10 80 L50 10 L90 80 L70 80 L50 40 L30 80 Z"
+                  stroke="#00ffff" stroke-width="2" fill="none">
+              <animate attributeName="stroke-dasharray"
+                       from="0,300" to="300,0"
+                       dur="2s" repeatCount="indefinite" />
+            </path>
+           
+          </svg>
+          
+        </div>
+      </a>
+    </section>
+    <div class="logo-glitch glitch" data-text="Geddy-Wendot">Geddy-Wendot</div>
+    <h1 id="typewriter"></h1>
+    <p class="subtitle">Mathematics. Code. Cybersecurity. Welcome to my command center.</p>
+    <button id="modeToggle">Switch Mode</button>
+    <span id="modeLabel">Hacker Mode</span>
+  </header>
+
+  <!-- 🔧 Main Sections -->
   <main>
     <section id="home" class="reveal">
-    <a href="#home" class="logo-link">
-  <div class="logo-container">
-    <svg viewBox="0 0 100 100" width="60" height="60" class="logo-svg">
-      <path d="M10 80 L50 10 L90 80 L70 80 L50 40 L30 80 Z"
-            stroke="#00ffff" stroke-width="2" fill="none">
-        <animate attributeName="stroke-dasharray"
-                 from="0,300" to="300,0"
-                 dur="2s" repeatCount="indefinite" />
-      </path>
-    </svg>
-    <h1 class="glitch" data-text="G-Vector">G-Vector</h1>
+      <a href="#home" class="logo-link">
+        <div class="logo-container">
+          <svg viewBox="0 0 100 100" width="60" height="60" class="logo-svg">
+            <path d="M10 80 L50 10 L90 80 L70 80 L50 40 L30 80 Z"
+                  stroke="#00ffff" stroke-width="2" fill="none">
+              <animate attributeName="stroke-dasharray"
+                       from="0,300" to="300,0"
+                       dur="2s" repeatCount="indefinite" />
+            </path>
+            <!--h1 class="glitch" data-text="G-Vector">G-Vector</h1-->
+          </svg>
+          
+        </div>
+      </a>
+    </section>
 
+    <div id="terminalOverlay" class="terminal">
+  <div class="terminal-content">
+    <span id="terminalNoise" class="terminal-glitch"></span>
   </div>
-</a>
-</section>
+</div>
+
 
     <section id="about" class="reveal">
       <h2>About Me</h2>
-      <p>I go by <strong>Wendot Geddy Amdany</strong>. A university student with a sharp mind for math, an obsession with code, and a growing arsenal in cybersecurity and AI. When I'm not in class, I'm probably solving a complex proof in solitude, or building something weird in Python.</p>
+      <p>I go by <strong>Wendot Geddy Amdany</strong>, also known as <strong>G-Vector</strong>. I'm pursuing a BSc in Mathematics and Computer Science, with a strong interest in Cybersecurity and Artificial Intelligence. Currently building AI models for cyber threat detection and prediction.</p>
     </section>
 
     <section id="goals" class="reveal">
@@ -70,9 +149,9 @@
     <section id="achievements" class="reveal">
       <h2>Achievements</h2>
       <ul>
-        <li>🎓 Completed foundational courses in pure & applied math, programming, databases, and system design</li>
-        <li>📜 Coursera Cybersecurity Specialization (in progress)</li>
-        <li>🏆 Final project in OOP: Student Management System with MySQL backend</li>
+        <li>🎓 Completed courses in math, programming, and system design</li>
+        <li>📜 Cybersecurity Specialization on Coursera (in progress)</li>
+        <li>🏆 OOP Project: Student Management System with MySQL</li>
       </ul>
     </section>
 
@@ -82,33 +161,40 @@
         <h3>NSL-KDD Intrusion Detector</h3>
         <p><strong>Category:</strong> Cybersecurity / AI</p>
         <p><strong>Stack:</strong> Python, Scikit-learn, Pandas</p>
-        <p>Built a model to classify network traffic using the NSL-KDD dataset. Implemented preprocessing, class balancing, and evaluation metrics.</p>
+        <p>Built a model using the NSL-KDD dataset. Implemented preprocessing, class balancing, and evaluation metrics.</p>
         <a href="https://github.com/G-Vector/nsl-kdd-detector" target="_blank">🔗 View on GitHub</a>
       </div>
       <div class="project">
         <h3>CLI Math Puzzle Game</h3>
         <p><strong>Category:</strong> Miscellaneous</p>
         <p><strong>Stack:</strong> Python</p>
-        <p>A terminal-based game that tests mathematical logic and speed. Created for fun and mental warm-ups.</p>
+        <p>A terminal-based game testing math logic and speed. Built for fun and warm-ups.</p>
         <a href="https://github.com/G-Vector/cli-math-puzzle" target="_blank">🔗 View on GitHub</a>
       </div>
     </section>
-
-
-
 
     <section id="contact" class="reveal">
       <h2>Secure Contact</h2>
       <p>Email: <a href="mailto:geddywendot@gmail.com">geddywendot@gmail.com</a></p>
       <p>GitHub: <a href="https://github.com/Geddy-Wendot" target="_blank">@Geddy-Wendot</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/geddy-wendot" target="_blank">in/geddy wendot</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/geddy-wendot" target="_blank">in/geddy-wendot</a></p>
     </section>
+
+    <!-- FAKE HACKER LOGIN TERMINAL -->
+<div id="loginOverlay" class="terminal hidden">
+  <div class="terminal-content">
+    <p class="terminal-glitch">ENTER PASSPHRASE TO PROCEED:</p>
+    <input type="password" id="loginInput" class="terminal-input" placeholder="G‑Vector" />
+    <button id="loginBtn" class="modeToggleBtn glitch">UNLOCK</button>
+    <p id="loginMsg" class="terminal-msg"></p>
+  </div>
+</div>
+
   </main>
 
   <footer>
     <p>&copy; 2025 Geddy Wendot | Built with caffeine and code.</p>
   </footer>
-
 
   <script src="script.js"></script>
 </body>
