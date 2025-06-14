@@ -47,3 +47,17 @@ document.addEventListener("DOMContentLoaded", () => {
   revealOnScroll();
 });
 
+// Theme toggle with memory
+const modeToggle = document.getElementById("modeToggle");
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+  document.body.classList.add(savedTheme);
+}
+
+modeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("light");
+
+  const theme = document.body.classList.contains("light") ? "light" : "dark";
+  localStorage.setItem("theme", theme);
+});
