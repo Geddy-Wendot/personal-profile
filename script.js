@@ -113,3 +113,30 @@ document.addEventListener("DOMContentLoaded", () => {
     audio.play().catch(() => {});
   }
 });
+
+// script.js – add inside DOMContentLoaded
+function animateTerminal(el, text, delay = 50) {
+  el.textContent = '';
+  let i = 0;
+  const typer = () => {
+    if (i < text.length) {
+      el.textContent += text[i++];
+      setTimeout(typer, delay + Math.random() * delay);
+    }
+  };
+  typer();
+}
+
+// After page load...
+const terminalEl = document.querySelector('#flagship-project .terminal-style');
+const logText = `> Booting G-Vector Neural Grid...
+> Injecting MNIST-Vision → Conv2D Layers
+> Streaming NSL-KDD Network Packets...
+> Hybrid Pattern Match Detected
+> Threat Type: DOS - Smurf 🐍
+> Prediction Confidence: 97.3%
+> Defense Mode: Active — Attack Blocked 🔐
+
+> System Idle | Awaiting Next Threat...
+`;
+animateTerminal(terminalEl, logText, 30);

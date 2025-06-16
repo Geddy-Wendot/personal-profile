@@ -15,6 +15,8 @@
   <meta property="og:title" content="G-Vector | Cyber Portfolio">
   <meta property="og:description" content="Explore Geddy Wendot's portfolio, featuring projects in cybersecurity, programming, and mathematics.">
   <link rel="apple-touch-icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     body {
@@ -60,21 +62,24 @@
     }
   </style>
 </head>
+
+
 <body class="dark">
 
   <!-- 🟩 TERMINAL GLITCH OVERLAY -->
-  <div id="terminalOverlay" class="terminal hidden">
+  <!--<div id="terminalOverlay" class="terminal hidden">
     <div class="terminal-content">
       <p class="terminal-glitch">ACCESS GRANTED</p>
       <pre id="terminalNoise">█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒</pre>
     </div>
-  </div>
+  </div> -->
 
   <!-- 🔻 Sidebar Navigation -->
   <nav class="sidebar">
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#goals">Goals</a></li>
       <li><a href="#achievements">Achievements</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -90,9 +95,9 @@
           <svg viewBox="0 0 100 100" width="60" height="60" class="logo-svg">
             <path d="M10 80 L50 10 L90 80 L70 80 L50 40 L30 80 Z"
                   stroke="#00ffff" stroke-width="2" fill="none">
-              <animate attributeName="stroke-dasharray"
+            <!--  <animate attributeName="stroke-dasharray"
                        from="0,300" to="300,0"
-                       dur="2s" repeatCount="indefinite" />
+                       dur="2s" repeatCount="indefinite" /> -->
             </path>
            
           </svg>
@@ -103,22 +108,22 @@
     <div class="logo-glitch glitch" data-text="Geddy-Wendot">Geddy-Wendot</div>
     <h1 id="typewriter"></h1>
     <p class="subtitle">Mathematics. Code. Cybersecurity. Welcome to my command center.</p>
-    <button id="modeToggle">Switch Mode</button>
-    <span id="modeLabel">Hacker Mode</span>
+    <!--<button id="modeToggle">Switch Mode</button>-->
+    <!--<span id="modeLabel">Hacker Mode</span>-->
   </header>
 
   <!-- 🔧 Main Sections -->
   <main>
     <section id="home" class="reveal">
       <a href="#home" class="logo-link">
-        <div class="logo-container">
-          <svg viewBox="0 0 100 100" width="60" height="60" class="logo-svg">
+        <!--<div class="logo-container">-->
+         <!-- <svg viewBox="0 0 100 100" width="60" height="60" class="logo-svg">
             <path d="M10 80 L50 10 L90 80 L70 80 L50 40 L30 80 Z"
                   stroke="#00ffff" stroke-width="2" fill="none">
               <animate attributeName="stroke-dasharray"
                        from="0,300" to="300,0"
-                       dur="2s" repeatCount="indefinite" />
-            </path>
+                       dur="2s" repeatCount="indefinite" /> 
+            </path> --> 
             <!--h1 class="glitch" data-text="G-Vector">G-Vector</h1-->
           </svg>
           
@@ -133,52 +138,362 @@
 </div>
 
 
-    <section id="about" class="reveal">
-      <h2>About Me</h2>
-      <p>I go by <strong>Wendot Geddy Amdany</strong>, also known as <strong>G-Vector</strong>. I'm pursuing a BSc in Mathematics and Computer Science, with a strong interest in Cybersecurity and Artificial Intelligence. Currently building AI models for cyber threat detection and prediction.</p>
-    </section>
+    <section id="about" class="section reveal">
+  <h2 class="section-title glitch" data-text="About Me">About Me</h2>
+  <div class="about-content">
+    <p>
+      👋 Yo, I’m <strong>Geddy Wendot</strong> — a code-bending, cyber-curious developer merging 
+      <strong>cybersecurity, AI, and software engineering</strong> into one chaotic, brilliant system.
+    </p>
+    <p>
+      I’m currently pursuing a <strong>BSc in Mathematics and Computer Science</strong> with a passion 
+      for building tools that actually solve real-world problems — from phishing detection AI to 
+      encrypted vaults and hacker-style dashboards.
+    </p>
+    <p>
+      My skillset spans across <strong>software development</strong>, <strong>network forensics</strong>, 
+      <strong>machine learning</strong>, and good old-fashioned <strong>terminal wizardry</strong>. 
+      I'm also obsessed with turning boring UI into glitchy, glowing experiences.
+    </p>
+    <p>
+      When I’m not decoding code or plotting my future startup, I’m probably breaking things in 
+      <strong>VS Code</strong> just to fix them better.
+    </p>
+    <p>
+      <strong>Currently building:</strong> <code>PhishNet Lite</code> – an AI-powered phishing detector 
+      for students, bloggers, and small businesses.
+    </p>
+    <p>
+      <strong>Mission:</strong> Build. Break. Secure. Repeat.
+    </p>
+  </div>
+</section>
 
-    <section id="goals" class="reveal">
-      <h2>Goals</h2>
-      <ul>
-        <li>🎯 Short-Term: Master Python, Linux, ethical hacking tools</li>
-        <li>🚀 Long-Term: Launch an AI-powered threat detection startup</li>
+<!-- BEFORE SKILLS -->
+<div class="section-divider"></div>
+<div class="terminal-divider">+================= [:: SKILLS ::] =================+</div>
+
+ <!-- Include Font Awesome CDN in your <head> -->
+
+
+<section id="skills" class="skills-section section reveal">
+  <h2 class="section-title glitch" data-text="Skills">Skills</h2>
+
+  <!-- 🖥 Programming Languages -->
+  <div class="skills-category">
+    <h3>💻 Programming Languages</h3>
+    <div class="skills-grid">
+      <span class="skill-box"><i class="fa-brands fa-python"></i> Python</span>
+      <span class="skill-box"><i class="fa-brands fa-java"></i> Java</span>
+      <span class="skill-box"><i class="fa-brands fa-js"></i> JavaScript</span>
+      <span class="skill-box"><i class="fa-brands fa-html5"></i> HTML</span>
+      <span class="skill-box"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+      <span class="skill-box"><i class="fas fa-database"></i> SQL</span>
+    </div>
+  </div>
+
+  <!-- 🛠 Tools -->
+  <div class="skills-category">
+    <h3>⚙️ Software Development & Tools</h3>
+    <div class="skills-grid">
+      <span class="skill-box"><i class="fas fa-code"></i> OOP</span>
+      <span class="skill-box"><i class="fa-brands fa-git-alt"></i> Git</span>
+      <span class="skill-box"><i class="fa-brands fa-github"></i> GitHub</span>
+      <span class="skill-box"><i class="fas fa-terminal"></i> VS Code</span>
+      <span class="skill-box"><i class="fas fa-cloud"></i> Google Colab</span>
+      <span class="skill-box"><i class="fas fa-project-diagram"></i> System Design</span>
+    </div>
+  </div>
+
+  <!-- 📊 Data & AI -->
+  <div class="skills-category">
+    <h3>🧠 AI & Data Science</h3>
+    <div class="skills-grid">
+      <span class="skill-box"><i class="fas fa-table"></i> Pandas</span>
+      <span class="skill-box"><i class="fas fa-square-root-alt"></i> NumPy</span>
+      <span class="skill-box"><i class="fas fa-robot"></i> Scikit-learn</span>
+      <span class="skill-box"><i class="fas fa-network-wired"></i> NSL-KDD</span>
+      <span class="skill-box"><i class="fas fa-balance-scale"></i> Class Balancing</span>
+      <span class="skill-box"><i class="fas fa-sliders-h"></i> Model Tuning</span>
+    </div>
+  </div>
+
+  <!-- 🛡️ Cybersecurity -->
+  <div class="skills-category">
+    <h3>🛡️ Cybersecurity</h3>
+    <div class="skills-grid">
+      <span class="skill-box"><i class="fas fa-wave-square"></i> Wireshark</span>
+      <span class="skill-box"><i class="fas fa-search-location"></i> Nmap</span>
+      <span class="skill-box"><i class="fas fa-terminal"></i> Bash</span>
+      <span class="skill-box"><i class="fab fa-linux"></i> Linux CLI</span>
+      <span class="skill-box"><i class="fas fa-lock"></i> Encryption</span>
+      <span class="skill-box"><i class="fas fa-shield-alt"></i> Phishing Detection</span>
+    </div>
+  </div>
+
+  <!-- 🌐 Web Design -->
+  <div class="skills-category">
+    <h3>🎨 Web & UI Design</h3>
+    <div class="skills-grid">
+      <span class="skill-box"><i class="fas fa-terminal"></i> Terminal UI</span>
+      <span class="skill-box"><i class="fas fa-bug"></i> Glitch Effects</span>
+      <span class="skill-box"><i class="fas fa-scroll"></i> Smooth Scrolling</span>
+      <span class="skill-box"><i class="fas fa-moon"></i> Dark Mode</span>
+    </div>
+  </div>
+
+  <!-- 🧠 Soft Skills -->
+  <div class="skills-category">
+    <h3>🧠 Soft Skills</h3>
+    <div class="skills-grid">
+      <span class="skill-box"><i class="fas fa-lightbulb"></i> Critical Thinking</span>
+      <span class="skill-box"><i class="fas fa-users-cog"></i> Team Leadership</span>
+      <span class="skill-box"><i class="fas fa-tools"></i> Problem Solving</span>
+      <span class="skill-box"><i class="fas fa-brain"></i> Self-Learning</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- BEFORE GOALS -->
+<div class="section-divider"></div>
+<div class="terminal-divider">+================= [:: MY GOALS ::] =================+</div>
+
+   <section id="goals" class="section reveal goals-section">
+  <h2 class="section-title glitch" data-text="Mission Objectives">Mission Objectives</h2>
+  <div class="goals-grid">
+
+    <div class="goal-card goal-cyber">
+      <h3><i class="fas fa-shield-alt"></i> Master Cybersecurity</h3>
+      <p>Penetration testing, threat intel, ethical hacking — total digital defense dominance.</p>
+    </div>
+
+    <div class="goal-card goal-ai">
+      <h3><i class="fas fa-brain"></i> Integrate AI into Security</h3>
+      <p>Train neural nets to sniff out threats before they breathe. Predict. Prevent. Prevail.</p>
+    </div>
+
+    <div class="goal-card goal-startup">
+      <h3><i class="fas fa-rocket"></i> Launch a Real-World Startup</h3>
+      <p>Deploy a cybersecurity-AI weapon by 2026. Lightweight, lethal, and learner-friendly.</p>
+    </div>
+
+    <div class="goal-card goal-opensource">
+      <h3><i class="fas fa-code-branch"></i> Build Open-Source Tools</h3>
+      <p>Make free tools for students, devs & cyber warriors. Practical, minimal, and usable.</p>
+    </div>
+
+    <div class="goal-card goal-learn">
+      <h3><i class="fas fa-book-reader"></i> Self-Teach Efficiently</h3>
+      <p>Execute the 6.5-month bootcamp like a mission — Python, AI, Cyber, all logged and tracked.</p>
+    </div>
+
+    <div class="goal-card goal-apply">
+      <h3><i class="fas fa-hammer"></i> Apply What I Learn</h3>
+      <p>No theory-only. Every concept → project. Every skill → tool. Learn. Build. Repeat.</p>
+    </div>
+
+    <div class="goal-card goal-impact">
+      <h3><i class="fas fa-users-cog"></i> Make Tech Useful</h3>
+      <p>Build stuff that helps real people — students, bloggers, small startups. No fluff.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- BEFORE ACHIEVEMENTS -->
+<div class="section-divider"></div>
+<div class="terminal-divider">+================= [:: ACHIEVEMENTS ::] =================+</div>
+
+   <section id="achievements" class="section reveal achievements-section">
+  <h2 class="section-title glitch" data-text="Achievements Unlocked">Achievements Unlocked</h2>
+  <div class="achievements-grid">
+
+    <div class="achievement-card achievement-cert">
+      <h3><i class="fas fa-certificate"></i> Cybersecurity Fundamentals – Coursera</h3>
+      <p>Completed an online course on the fundamentals of cybersecurity and digital threats.</p>
+    </div>
+
+    <div class="achievement-card achievement-project">
+      <h3><i class="fas fa-project-diagram"></i> Cyber-AI Hybrid Intrusion Detection</h3>
+      <p>Built a dual-model using NSL-KDD and MNIST datasets to detect cyber threats.</p>
+    </div>
+
+    <div class="achievement-card achievement-event">
+      <h3><i class="fas fa-user-secret"></i> CTF Challenge Participant</h3>
+      <p>Participated in a local Capture The Flag event and solved real-world exploit puzzles.</p>
+    </div>
+
+    <div class="achievement-card achievement-learn">
+      <h3><i class="fas fa-laptop-code"></i> Completed 6 Python Projects</h3>
+      <p>Applied core concepts in Python with self-built projects using GitHub and VS Code.</p>
+    </div>
+
+    <div class="achievement-card achievement-hackathon">
+      <h3><i class="fas fa-rocket"></i> Hackathon – AI for Good</h3>
+      <p>Teamed up to build an AI chatbot that supports mental health awareness.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- BEFORE PROJECTS -->
+<div class="section-divider"></div>
+<div class="terminal-divider">+================= [:: ACTIVE OPERATIONS ::] =================+</div>
+
+    <section id="projects" class="section reveal">
+  <h2 class="section-title glitch" data-text="Active Operations">Active Operations</h2>
+  <p class="section-subtext">Each mission is built for impact, forged in code, and field-tested for the digital battlefield.</p>
+
+  <div class="project-grid">
+
+
+    <!-- PROJECT CARD -->
+    <div class="project-card">
+      <div class="mission-status" data-status="ACTIVE">
+  <span class="status-label">[ IN PROGRESS ]</span>
+</div>
+
+      <div class="project-header glitch" data-text="PhishNet Lite">PhishNet Lite</div>
+      <p class="project-desc">
+        A lightweight AI-powered phishing URL detector. Targets students, bloggers & small businesses for safer browsing.
+      </p>
+      <ul class="project-tags">
+        <li>Python</li>
+        <li>Scikit-learn</li>
+        <li>Cybersecurity</li>
       </ul>
-    </section>
+      <div class="project-links">
+        <a href="https://github.com/G-Vector/phishnet-lite" target="_blank" class="btn-glitch">💻 View Code</a>
+        <a href="https://phishnet-lite-demo.netlify.app" target="_blank" class="btn-glitch-alt">🚀 Live Demo</a>
+      </div>
+    </div>
 
-    <section id="achievements" class="reveal">
-      <h2>Achievements</h2>
-      <ul>
-        <li>🎓 Completed courses in math, programming, and system design</li>
-        <li>📜 Cybersecurity Specialization on Coursera (in progress)</li>
-        <li>🏆 OOP Project: Student Management System with MySQL</li>
+    <!-- PROJECT CARD -->
+    <div class="project-card">
+      <div class="mission-status" data-status="ACTIVE">
+  <span class="status-label">[ NEAR COMPLITION ]</span>
+</div>
+
+      <div class="project-header glitch" data-text="Student Manager">Student Manager</div>
+      <p class="project-desc">
+        A Java-based desktop app to manage student records, built with OOP, JDBC, and MySQL. Simple. Functional. Fast.
+      </p>
+      <ul class="project-tags">
+        <li>Java</li>
+        <li>MySQL</li>
+        <li>OOP</li>
       </ul>
-    </section>
-
-    <section id="projects" class="reveal">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>NSL-KDD Intrusion Detector</h3>
-        <p><strong>Category:</strong> Cybersecurity / AI</p>
-        <p><strong>Stack:</strong> Python, Scikit-learn, Pandas</p>
-        <p>Built a model using the NSL-KDD dataset. Implemented preprocessing, class balancing, and evaluation metrics.</p>
-        <a href="https://github.com/G-Vector/nsl-kdd-detector" target="_blank">🔗 View on GitHub</a>
+      <div class="project-links">
+        <a href="https://github.com/G-Vector/student-manager" target="_blank" class="btn-glitch">💻 View Code</a>
       </div>
-      <div class="project">
-        <h3>CLI Math Puzzle Game</h3>
-        <p><strong>Category:</strong> Miscellaneous</p>
-        <p><strong>Stack:</strong> Python</p>
-        <p>A terminal-based game testing math logic and speed. Built for fun and warm-ups.</p>
-        <a href="https://github.com/G-Vector/cli-math-puzzle" target="_blank">🔗 View on GitHub</a>
-      </div>
-    </section>
+    </div>
 
-    <section id="contact" class="reveal">
-      <h2>Secure Contact</h2>
-      <p>Email: <a href="mailto:geddywendot@gmail.com">geddywendot@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/Geddy-Wendot" target="_blank">@Geddy-Wendot</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/geddy-wendot" target="_blank">in/geddy-wendot</a></p>
-    </section>
+    <!-- PROJECT CARD -->
+    <div class="project-card">
+      <div class="mission-status" data-status="ACTIVE">
+  <span class="status-label">[ HAULTED ]</span>
+</div>
+
+      <div class="project-header glitch" data-text="CLI Math Game">CLI Math Game</div>
+      <p class="project-desc">
+        Terminal-based Python game with logic puzzles and a time challenge. Because nerds deserve fun too.
+      </p>
+      <ul class="project-tags">
+        <li>Python</li>
+        <li>CLI</li>
+        <li>Logic</li>
+      </ul>
+      <div class="project-links">
+        <a href="https://github.com/G-Vector/math-battle-cli" target="_blank" class="btn-glitch">💻 View Code</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BEFORE FLAGSHIP PROJECT -->
+<div class="section-divider"></div>
+<div class="terminal-divider">+================= [:: FLAGSHIP PROJECT ::] =================+</div>
+
+<section id="flagship-project" class="section reveal highlight">
+  <h2 class="section-title glitch" data-text="G-Vector’s First Weapon">G-Vector’s First Weapon</h2>
+  
+  <div class="flagship-grid">
+
+    <div class="flagship-intro">
+      <p class="section-subtext">
+        Step into the next-gen battlefield of cybersecurity. <strong>G-Vector’s First Weapon</strong> is a hybrid AI-powered intrusion detection system that merges image intelligence with network data to predict, detect, and neutralize threats before they happen.
+      </p>
+
+      <ul class="flagship-features">
+        <li>🧠 Hybrid CNN: Visual + Tabular Input</li>
+        <li>🔍 Real-Time Threat Prediction</li>
+        <li>🌐 Trained on NSL-KDD & MNIST</li>
+        <li>🛡️ Mimics Hacker Behavior, Defends Like a Guardian</li>
+        <li>⚙️ Built with Python, PyTorch, and Sklearn</li>
+      </ul>
+
+      <div class="flagship-meta">
+        <span class="status-label live">🧪 Prototyping Stage</span>
+        <span class="coming-soon">🚀 Beta Launch: Q1 2026</span>
+      </div>
+    </div>
+
+    <div class="flagship-terminal">
+      <div class="ascii-shield glitch-shield">
+  <pre>
+     /\     /\
+    /__\___/__\
+    \  /   \  /
+     \/     \/
+  </pre>
+</div>
+
+      <pre class="terminal-style">
+> Booting G-Vector Neural Grid...
+> Injecting MNIST-Vision → Conv2D Layers
+> Streaming NSL-KDD Network Packets...
+> Hybrid Pattern Match Detected
+> Threat Type: DOS - Smurf 🐍
+> Prediction Confidence: 97.3%
+> Defense Mode: Active — Attack Blocked 🔐
+
+> System Idle | Awaiting Next Threat...
+      </pre>
+    </div>
+
+  </div>
+</section>
+
+<!-- BEFORE CONTACT -->
+<div class="section-divider"></div>
+<div class="terminal-divider">+================= [:: SECURE CONTACT ::] =================+</div>
+
+
+
+   <section id="contact" class="section reveal">
+  <h2 class="section-title glitch" data-text="Secure Contact">Secure Contact</h2>
+  <div class="contact-terminal">
+    <pre>> AUTHENTICATED SESSION: G-Vector_CommBridge</pre>
+    <pre>> CHANNEL STATUS: Encrypted</pre>
+    <div class="contact-links">
+      <p><span class="label">📧 EMAIL:</span> <a href="mailto:geddywendot@gmail.com">geddywendot@gmail.com</a></p>
+      <p><span class="label">💻 GITHUB:</span> <a href="https://github.com/Geddy-Wendot" target="_blank">Geddy-Wendot</a></p>
+      <p><span class="label">🔗 LINKEDIN:</span> <a href="https://www.linkedin.com/in/geddy-wendot-5843ba307" target="_blank">in/geddy wendot</a></p>
+
+      <div class="resume-download">
+  <a href="assets/Geddy-Wendot-Resume.pdf" download class="glitch-button" data-text="⬇ Download Résumé">
+    ⬇ Download Résumé
+  </a>
+</div>
+
+    </div>
+    <pre class="contact-footer">>> Awaiting transmission...</pre>
+  </div>
+</section>
+
 
     <!-- FAKE HACKER LOGIN TERMINAL -->
 <div id="loginOverlay" class="terminal hidden">
@@ -193,7 +508,26 @@
   </main>
 
   <footer>
+
+     <div class="glitch-border">
+    <div class="social-icons">
+      <a href="https://github.com/Geddy-Wendot" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://instagram.com/wendot_amdany" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@YOUR_USERNAME" target="_blank" title="TikTok">
+        <i class="fab fa-tiktok"></i>
+
+      <a href="https://www.linkedin.com/in/geddy-wendot-5843ba307" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin-in"></i></a>  
+        
+      </a>
+    </div>
+  </div>
     <p>&copy; 2025 Geddy Wendot | Built with caffeine and code.</p>
+
   </footer>
 
   <script src="script.js"></script>
