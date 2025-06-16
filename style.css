@@ -1,6 +1,78 @@
 /* ========================== */
 /* SIDEBAR NAVIGATION         */
 /* ========================== */
+
+/* Universal box sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Reduce hero padding on small screens */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Sidebar nav switches to top bar on small screens */
+@media (max-width: 1024px) {
+  nav.sidebar {
+    position: static;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #111;
+  }
+  nav.sidebar ul {
+    flex-wrap: wrap;
+  }
+  nav.sidebar ul li {
+    flex: 1 1 auto;
+  }
+}
+
+/* Stack flagship grid on tablet/mobile */
+@media (max-width: 900px) {
+  .flagship-grid {
+    display: block;
+  }
+  .flagship-terminal {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Stack goals and achievements grids */
+@media (max-width: 768px) {
+  .goals-grid,
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Skills grid wraps neatly */
+@media (max-width: 600px) {
+  .skills-grid {
+    justify-content: center;
+  }
+}
+
+/* Footer social icons sizing */
+@media (max-width: 480px) {
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+  .footer-credit {
+    font-size: 0.9rem;
+  }
+}
+
+/* Typewriter font size shrink on mobile */
+@media (max-width: 480px) {
+  #typewriter {
+    font-size: 1.2rem;
+  }
+}
+
 nav.sidebar {
   position: fixed;
   top: 0;
