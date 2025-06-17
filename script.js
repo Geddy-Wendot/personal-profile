@@ -140,3 +140,15 @@ const logText = `> Booting G-Vector Neural Grid...
 > System Idle | Awaiting Next Threat...
 `;
 animateTerminal(terminalEl, logText, 30);
+
+
+function toggleMenu() {
+    const nav = document.getElementById('mobile-nav');
+    const content = document.getElementById('main-content');
+
+    nav.classList.toggle('hidden');
+    content.classList.toggle('blur');
+  }
+
+
+
