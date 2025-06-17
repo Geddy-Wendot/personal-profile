@@ -1,6 +1,35 @@
+/* ========================== */  
+/*screen width*/
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+
+
 /* ========================== */
 /* SIDEBAR NAVIGATION         */
 /* ========================== */
+
+
 
 /* Universal box sizing */
 *, *::before, *::after {
@@ -904,4 +933,140 @@ body.light #modeLabel {
 .social-icons a:hover {
   color: #f0f;
   transform: scale(1.3) rotate(5deg);
+}
+
+/* ========================== */
+/*mobile settings */
+/* Hide sidebar and show hamburger icon */
+
+/* Default: no blur */
+#main-content {
+  transition: filter 0.3s ease;
+}
+
+/* Blurred when nav is active */
+.blur {
+  filter: blur(5px);
+  pointer-events: none; /* Prevents clicking while menu is open */
+}
+
+
+/* Hide the sidebar on screens smaller than 768px */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none !important;
+  }
+}
+/* Show hamburger icon on small screens */
+
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: #00ffff;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  background: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 60px;
+  transition: width 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-nav a {
+  padding: 1rem 2rem;
+  color: #00ffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.mobile-nav.open {
+  width: 60%;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+
+
+/*icon consistency */
+@media (max-width: 768px) {
+  .skills .fa-brands, .skills .fa-solid {
+    font-size: 1.2rem;
+  }
+
+  .social-icons i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* grid*/
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.box {
+  flex: 1 1 250px; /* Shrinks on mobile */
+  max-width: 100%;
+}
+
+/*shrink oversized elements*/
+@media (max-width: 768px) {
+  section, .hero, .skills, .goals, .achievements {
+    padding: 40px 10px;
+    text-align: center;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .skills-grid, .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
