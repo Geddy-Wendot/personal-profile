@@ -1070,3 +1070,51 @@ body.light #modeLabel {
     grid-template-columns: 1fr;
   }
 }
+
+/* 📱 Responsive Fixes for Mobile and Tablet */
+@media (max-width: 768px) {
+  /* Remove sidebar ghost spacing */
+  main, header, footer {
+    margin-left: 0 !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Stack grids vertically */
+  .project-grid,
+  .skills-grid,
+  .flagship-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  /* Optional: Tweak button spacing */
+  .resume-button {
+    margin: 1.5rem auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 0 1rem;
+  }
+
+  .skill-box {
+    max-width: 150px;
+    min-width: 120px;
+    flex: 1 1 40%;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 0.8rem;
+  }
+}
