@@ -602,6 +602,29 @@ section#flagship-project {
   to { transform: rotate(360deg); }
 }
 
+body.legacy-mode {
+  background-color: #000000 !important;
+  color: #00ff00 !important;
+  font-family: 'Courier New', monospace;
+}
+
+body.legacy-mode a {
+  color: #00ff00 !important;
+}
+
+body.legacy-mode .glitch,
+body.legacy-mode .section-title,
+body.legacy-mode .project-header {
+  text-shadow: none !important;
+  color: #00ff00 !important;
+  animation: none !important;
+}
+
+body.legacy-mode .project-card {
+  border-left: 3px solid #00ff00 !important;
+  background: #001100;
+}
+
 
 .terminal-style {
   white-space: pre-wrap;
