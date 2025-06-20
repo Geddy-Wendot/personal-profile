@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   };
-  window.addEventListener("scroll", revealOnScroll);
+   window.addEventListener("scroll", revealOnScroll);
   revealOnScroll();
 
   // 🔁 Smooth Scroll
@@ -150,5 +150,24 @@ function toggleMenu() {
     content.classList.toggle('blur');
   }
 
+
+const legacySequence = [
+  "ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown",
+  "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight",
+  "b", "a"
+];
+let legacyInput = [];
+
+window.addEventListener("keydown", (e) => {
+  legacyInput.push(e.key);
+  if (legacyInput.length > legacySequence.length) {
+    legacyInput.shift(); // keep latest N keys
+  }
+
+  if (legacyInput.join("") === legacySequence.join("")) {
+    document.body.classList.toggle("legacy-mode");
+    console.log("👾 Legacy OS Mode Activated");
+  }
+});
 
 

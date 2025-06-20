@@ -511,6 +511,11 @@ main, header, footer {
   }
 }
 
+.project-card[data-project="mavunowatch"] {
+  border-left: 3px solid #00ff66;
+  box-shadow: 0 0 10px #00ff66;
+}
+
 
 
 section#flagship-project {
@@ -541,6 +546,62 @@ section#flagship-project {
   color: #00ff99;
   box-shadow: 0 0 10px #0ff;
 }
+
+.trivium-content {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.highlight-ai {
+  color: #00ffff;
+  font-weight: bold;
+}
+
+.highlight-cyber {
+  color: #ff00c8;
+  font-weight: bold;
+}
+
+.highlight-impact {
+  color: #00ff66;
+  font-weight: bold;
+}
+
+
+.trivium-logo-container {
+  text-align: center;
+  margin: 2rem auto;
+  animation: fadeIn 1s ease-in;
+}
+
+.trivium-logo {
+  width: 120px;
+  height: 120px;
+  animation: spin 10s linear infinite;
+  filter: drop-shadow(0 0 10px #00ffff);
+}
+
+.trivium-logo .outer {
+  fill: none;
+  stroke: #00ffff;
+  stroke-width: 2;
+  stroke-dasharray: 4 2;
+}
+
+.trivium-logo .inner {
+  fill: #00ffcc;
+  opacity: 0.6;
+  stroke: #ff00c8;
+  stroke-width: 1;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 
 .terminal-style {
   white-space: pre-wrap;
